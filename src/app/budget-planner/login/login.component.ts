@@ -16,9 +16,11 @@ loginForm:any;
 registerForm:any;
 activeForm: 'login' | 'register' = 'login';
 
-constructor( private _fb: FormBuilder,
+constructor( 
+  private _fb: FormBuilder,
   private _router: Router,
-  private _snackBar: MatSnackBar){}
+  private _snackBar: MatSnackBar
+){}
 ngOnInit() {
   this.loginForm = this._fb.group({
     email: ['', [Validators.required, Validators.email]],
